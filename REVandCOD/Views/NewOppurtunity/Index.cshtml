@@ -1,0 +1,70 @@
+﻿@model REVandCOD.Models.NewOppurtunity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>NewOppurtunity</h2>
+
+@using (Html.BeginForm("Create", "NewOppurtunity"))
+{
+    <div class="form-group col-sm-6">
+        <div class="form-group">
+            @Html.LabelFor(m => m.AccountName)
+            @Html.TextBoxFor(m => m.AccountName, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Portfolio)
+            @Html.TextBoxFor(m => m.Portfolio, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.OppurtunityType)
+            @Html.TextBoxFor(m => m.OppurtunityType, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.OppurtunityNo)
+            @Html.TextBoxFor(m => m.OppurtunityNo, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.OppurtunityName)
+            @Html.TextBoxFor(m => m.OppurtunityName, new { @class = "form-control" })
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.CurrencyType)
+            @Html.DropDownListFor(m => m.CurrencyType, new SelectList("GDP"), "Select the CurrencyType", new { @class = "form-control" })
+        </div>
+
+    </div>
+            <div class="form-group col-sm-6">
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.SOW_TCV)
+                    @Html.TextBoxFor(m => m.SOW_TCV, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProjectManager)
+                    @Html.TextBoxFor(m => m.ProjectManager, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.DeliveryManager)
+                    @Html.TextBoxFor(m => m.DeliveryManager, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.AccountDeliveryHead)
+                    @Html.TextBoxFor(m => m.AccountDeliveryHead, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ClientPartner)
+                    @Html.TextBoxFor(m => m.ClientPartner, new { @class = "form-control" })
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create Oppurtunity</button>
+
+            </div>
+}

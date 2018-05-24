@@ -1,0 +1,45 @@
+﻿@model REVandCOD.Models.Oppurtunity
+
+
+@{
+    ViewBag.Title = "NewOpp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Oppurtunity</h2>
+
+
+<table id="movies" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>AccountName</th>
+            <th>Portfolio</th>
+            <th>OppurtunityType</th>
+            <th>OppurtunityNo</th>
+            <th>OppurtunityName</th>
+            <th>OppurtunityDescription</th>
+            <th>ProjectType</th>
+            <th>RFPDT</th>
+            <th>ProposalSubmissionDate</th>
+            <th>NegitationClosureDate</th>
+            <th>LOIDT</th>
+            <th>WinningProbability</th>
+            <th>OnDateClosureProbability</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>@Model.AccountName</td>
+        <td>@Model.Portfolio</td>
+        <td>@Model.OppurtunityType</td>
+        <td>@Model.OppurtunityNo</td>
+        <td>@Model.OppurtunityName</td>
+        <td>@Model.OppurtunityDescription</td>
+        <td>@Model.ProjectType</td>
+        <td>@Model.RFPDT</td>
+        <td>@Model.ProposalSubmissionDate</td>
+        <td>@Model.NegitationClosureDate</td>
+        <td>@Model.LOIDT </td>
+        <td>@Model.WinningProbability </td>
+        <td>@Model.OnDateClosureProbability
+    </tr>
+</table>
