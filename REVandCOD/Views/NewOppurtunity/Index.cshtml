@@ -37,7 +37,10 @@
 
         <div class="form-group">
             @Html.LabelFor(m => m.CurrencyType)
-            @Html.DropDownListFor(m => m.CurrencyType, new SelectList("GDP"), "Select the CurrencyType", new { @class = "form-control" })
+            @Html.DropDownListFor(m => m.CurrencyType, new List<SelectListItem>
+                   { new SelectListItem{Text="GBP", Value="GBP"},
+                     new SelectListItem{Text="EUR", Value="EUR"},
+                     new SelectListItem{Text="USD", Value="USD"}}, "Select the CurrencyType", new { @class = "form-control" })
         </div>
 
     </div>
