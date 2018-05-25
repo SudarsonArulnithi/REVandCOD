@@ -1,4 +1,4 @@
-﻿@model REVandCOD.Models.Oppurtunity
+﻿@model List<REVandCOD.Models.Oppurtunity>
 
 
 @{
@@ -25,21 +25,26 @@
             <th>LOIDT</th>
             <th>WinningProbability</th>
             <th>OnDateClosureProbability</th>
+            <th>SignatureExpectedDate</th>
         </tr>
     </thead>
-    <tr>
-        <td>@Model.AccountName</td>
-        <td>@Model.Portfolio</td>
-        <td>@Model.OppurtunityType</td>
-        <td>@Model.OppurtunityNo</td>
-        <td>@Model.OppurtunityName</td>
-        <td>@Model.OppurtunityDescription</td>
-        <td>@Model.ProjectType</td>
-        <td>@Model.RFPDT</td>
-        <td>@Model.ProposalSubmissionDate</td>
-        <td>@Model.NegitationClosureDate</td>
-        <td>@Model.LOIDT </td>
-        <td>@Model.WinningProbability </td>
-        <td>@Model.OnDateClosureProbability
-    </tr>
+    @foreach (var oppurt in Model)
+    {
+        <tr>
+            <td>@oppurt.AccountName</td>
+            <td>@oppurt.Portfolio</td>
+            <td>@oppurt.OppurtunityType</td>
+            <td>@oppurt.OppurtunityNo</td>
+            <td>@oppurt.OppurtunityName</td>
+            <td>@oppurt.OppurtunityDescription</td>
+            <td>@oppurt.ProjectType</td>
+            <td>@oppurt.RFPDT</td>
+            <td>@oppurt.ProposalSubmissionDate</td>
+            <td>@oppurt.NegitationClosureDate</td>
+            <td>@oppurt.LOIDT </td>
+            <td>@oppurt.WinningProbability </td>
+            <td>@oppurt.OnDateClosureProbability</td>
+            <td>@oppurt.SignatureExpectedDate</td>
+        </tr>
+    }
 </table>

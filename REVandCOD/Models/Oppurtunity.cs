@@ -22,5 +22,6 @@ namespace REVandCOD.Models
         public DateTime LOIDT { get; set; }
         public float WinningProbability { get; set; }
         public float OnDateClosureProbability { get; set; }
+        public DateTime SignatureExpectedDate { get; set; }
     }
 }
